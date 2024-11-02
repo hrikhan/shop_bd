@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class ShopColors {
   ShopColors._();
-  static const Color primaryColor = Color.fromARGB(255, 240, 2, 204);
+  static const Color primaryColor = Colors.green;
   // Light Theme Colors
   static const Color lightPrimaryColor = Color(0xFF4B868F);
   static const Color lightSecondaryColor = Color(0xFFA3D5D3);
