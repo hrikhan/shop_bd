@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_bd/common/widgets/container/cicular_container.dart';
 import 'package:shop_bd/utils/constant/colors.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -13,17 +14,26 @@ class HomeScreen extends StatelessWidget {
             Container(
               color: ShopColors.primaryColor,
               padding: EdgeInsets.all(0),
-              child: Stack(
-                children: [
-                  Container(
-                    width: 40,
-                    height: 400,
-                    padding: EdgeInsets.all(0),
-                   decoration: BoxDecoration(
-                    
-                   ),
-                  )
-                ],
+              child: SizedBox(
+                height: 400,
+                child: Stack(
+                  children: [
+                    Positioned(
+                      top: -150,
+                      right: -250,
+                      child: circular_container(
+                        backgroundcolor: Colors.white24,
+                      ),
+                    ),
+                    Positioned(
+                      top: 100,
+                      right: -200,
+                      child: circular_container(
+                        backgroundcolor: Colors.white24,
+                      ),
+                    ),
+                  ],
+                ),
               ),
             )
           ],
