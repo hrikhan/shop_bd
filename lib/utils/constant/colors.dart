@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ShopColors {
-
   ShopColors._();
-
+  static const Color primaryColor = Colors.indigo;
   // Light Theme Colors
   static const Color lightPrimaryColor = Color(0xFF4B868F);
   static const Color lightSecondaryColor = Color(0xFFA3D5D3);
