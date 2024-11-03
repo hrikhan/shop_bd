@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:shop_bd/common/widgets/container/primary_header_container.dart';
-import 'package:shop_bd/utils/constant/enum.dart';
+import 'package:shop_bd/features/shop/screens/home_screen_widget.dart/searchbar_widgets.dart';
+
 import 'package:shop_bd/utils/constant/size.dart';
-import 'package:shop_bd/utils/device/deviceutils/deviceutils.dart';
+
 
 import 'home_screen_widget.dart/home_appbar.dart';
 
@@ -23,15 +24,16 @@ class HomeScreen extends StatelessWidget {
                 children: [
                   home_appbar(),
 
+                  //spacing
+                  SizedBox(
+                    height: AppSizes.spacebetweenitem,
+                  ),
+
                   //searchbar
-                  Container(
-                    color: Colors.transparent,
-                    width: DeviceUtils.screenWidth(context),
-                    padding: EdgeInsets.all(AppSizes.marginMedium),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.grey)),
-                  )
+                  custom_searchbar_widgets(
+                    icons:  Icons.search,
+              
+                    text: "search for item", showicon: true, showbackground: true,)
 
                   //catagories
                 ],
@@ -43,3 +45,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
