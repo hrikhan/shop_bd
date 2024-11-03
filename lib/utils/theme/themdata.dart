@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shop_bd/utils/theme/custom_appbar_theme.dart';
 import 'package:shop_bd/utils/theme/elevated_button_theme.dart';
 import 'package:shop_bd/utils/theme/textfeild_theme.dart';
 
@@ -13,7 +14,8 @@ class Themeedata {
       scaffoldBackgroundColor: Colors.white,
       textTheme: Texttheme.light,
       elevatedButtonTheme: shopelevatedbutton.light,
-      inputDecorationTheme: TextFieldThemeConfig.light);
+      inputDecorationTheme: TextFieldThemeConfig.light,
+      appBarTheme: CustomAppBarTheme.lightTheme);
 
   //dark
   static ThemeData darktheme = ThemeData(
@@ -23,5 +25,6 @@ class Themeedata {
       scaffoldBackgroundColor: Colors.black,
       textTheme: Texttheme.dark,
       elevatedButtonTheme: shopelevatedbutton.dark,
-      inputDecorationTheme: TextFieldThemeConfig.dark);
+      inputDecorationTheme: TextFieldThemeConfig.dark,
+      appBarTheme: CustomAppBarTheme.lightTheme);
 }

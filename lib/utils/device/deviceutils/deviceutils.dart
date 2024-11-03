@@ -48,7 +48,7 @@ class DeviceUtils {
   // Get bottom padding (useful for devices with notches)
   static double bottomPadding(BuildContext context) =>
       MediaQuery.of(context).padding.bottom;
-  static double appbarheight(BuildContext context) {
-    return MediaQuery.of(context).size.height;
+  static double appbarheight() {
+    return kToolbarHeight;
   }
 }

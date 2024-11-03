@@ -42,7 +42,7 @@ class TextString {
 
   // Home Page Texts
   static const String homeTitle = "Welcome Home!";
-  static const String homeSubtitle = "Explore the latest updates and news.";
+  static const String homeSubtitle = "shoping with shop bd and rate us";
   static const String homeSearchHint = "Search for items, places, etc.";
 
   // Profile Page Texts
