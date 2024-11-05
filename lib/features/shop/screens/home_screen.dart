@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
 
 import 'package:shop_bd/common/widgets/container/primary_header_container.dart';
+import 'package:shop_bd/common/widgets/custom_shape/cicular_contianeer.dart';
 import 'package:shop_bd/common/widgets/reuse_widgets/heading_text.dart';
+import 'package:shop_bd/features/shop/screens/home_screen_widget.dart/catagories.dart';
 import 'package:shop_bd/features/shop/screens/home_screen_widget.dart/searchbar_widgets.dart';
+import 'package:shop_bd/utils/constant/image.dart';
 
 import 'package:shop_bd/utils/constant/size.dart';
+import 'package:shop_bd/utils/device/deviceutils/deviceutils.dart';
+import 'package:shop_bd/utils/helper/helper_funtion.dart';
 
 import 'home_screen_widget.dart/home_appbar.dart';
 
@@ -37,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                     showbackground: true,
                   ),
                   SizedBox(
-                    height: AppSizes.spacebetweenitem,
+                    height: DeviceUtils.screenHeight(context) * 0.03,
                   ),
 
                   Padding(
@@ -51,9 +56,16 @@ class HomeScreen extends StatelessWidget {
                         )
                       ],
                     ),
-                  )
+                  ),
+                  SizedBox(
+                    height: DeviceUtils.screenHeight(context) * 0.02,
+                  ),
 
                   //catagories
+                  Padding(
+                    padding: const EdgeInsets.only(left: AppSizes.defaultsize),
+                    child: home_catagories(),
+                  ),
                 ],
               ),
             ),
@@ -63,3 +75,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+

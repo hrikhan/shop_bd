@@ -9,43 +9,45 @@ class custom_searchbar_widgets extends StatelessWidget {
     super.key,
     required this.text,
     this.icons,
-   this.showborder=true,
-     this.showbackground=true,
+    this.showborder = true,
+    this.showbackground = true, this.ontap,
   });
   final String text;
   final IconData? icons;
   final bool showborder, showbackground;
-
+ final VoidCallback? ontap;
   @override
   Widget build(BuildContext context) {
     final dark = HelperFunction.isdark(context);
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: AppSizes.defaultsize),
-      child: Container(
-        width: DeviceUtils.screenWidth(context),
-        padding: const EdgeInsets.all(AppSizes.marginMedium),
-        decoration: BoxDecoration(
-            color: showbackground
-                ? dark
-                    ? Colors.black
-                    : Colors.white
-                : Colors.transparent,
-            borderRadius: BorderRadius.circular(20),
-            border:  showborder? Border.all(color: Colors.black):null),
-        child: Row(
-          children: [
-            Icon(
-              icons,
-              color: Colors.black,
-            ),
-            SizedBox(
-              width: AppSizes.spacebetweenitem,
-            ),
-            Text(text)
-          ],
+    return GestureDetector(
+      onTap: ontap,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: AppSizes.defaultsize),
+        child: Container(
+          width: DeviceUtils.screenWidth(context),
+          padding: const EdgeInsets.all(AppSizes.marginMedium),
+          decoration: BoxDecoration(
+              color: showbackground
+                  ? dark
+                      ? Colors.black
+                      : Colors.white
+                  : Colors.transparent,
+              borderRadius: BorderRadius.circular(20),
+              border: showborder ? Border.all(color: Colors.black) : null),
+          child: Row(
+            children: [
+              Icon(
+                icons,
+                color: dark ? Colors.white : Colors.black,
+              ),
+              SizedBox(
+                width: AppSizes.spacebetweenitem,
+              ),
+              Text(text)
+            ],
+          ),
         ),
       ),
     );
   }
 }
-    
