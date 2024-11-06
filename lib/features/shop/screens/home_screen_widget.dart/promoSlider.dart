@@ -23,7 +23,6 @@ class promoSlider extends StatelessWidget {
         items: bannars
             .map((url) => rounded_image(
                   imageurl: url,
-               
                 ))
             .toList(),
         options: CarouselOptions(
@@ -43,8 +42,8 @@ class promoSlider extends StatelessWidget {
             children: [
               for (int i = 0; i < 3; i++)
                 circular_container(
-                    height: 20,
-                    width: 4,
+                    height: 4,
+                    width: 20,
                     backgroundcolor:
                         controllar.carosal_slider_current_index.value == i
                             ? Colors.black
