@@ -5,6 +5,8 @@ import 'package:shop_bd/common/widgets/container/cicular_container.dart';
 import 'package:shop_bd/common/widgets/container/primary_header_container.dart';
 
 import 'package:shop_bd/common/widgets/custom_shape/rounded_image.dart';
+import 'package:shop_bd/common/widgets/product/product_card/product_card_horizontal.dart';
+import 'package:shop_bd/common/widgets/product/product_card/product_card_vertical.dart';
 import 'package:shop_bd/common/widgets/reuse_widgets/heading_text.dart';
 import 'package:shop_bd/features/authintication/screen/login_screen.dart';
 import 'package:shop_bd/features/shop/screens/home_screen_widget.dart/catagories.dart';
@@ -84,6 +86,8 @@ class HomeScreen extends StatelessWidget {
                     'assets/bannars/WhatsApp Image 2024-11-04 at 14.29.09_5f16a33e.jpg'
                   ],
                 ),
+                //recent product
+                ProductCardVertical()
               ],
             ),
           ],
